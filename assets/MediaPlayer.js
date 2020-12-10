@@ -22,4 +22,12 @@ MediaPlayer.prototype.mute = function () {
   this.media.muted = !this.media.muted;
 };
 
+MediaPlayer.prototype.play = function () {
+  if (this.media.paused) this.media.play();
+};
+
+MediaPlayer.prototype.pause = function () {
+  if (!this.media.paused) this.media.pause();
+};
+
 export default MediaPlayer;
